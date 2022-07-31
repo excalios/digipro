@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FCF6F7">
+
+    <EditText
+        android:id="@+id/email_login"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="315dp"
+
+        android:background="@drawable/kotak"
+        android:hint="Phone number, username or email"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/pass_login"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/kotak"
+        android:hint="Password"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/ForgotPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="455dp"
+        android:layout_marginRight="25dp"
+        android:text="Forgot Password?"
+        android:textColor="#884D57"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="499dp"
+        android:background="@drawable/NextButton"
+        android:text="Log in" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="570dp"
+        android:background="@drawable/LogInGoogle"
+        android:text="Log in" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="185dp"
+        android:layout_height="41dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/logo"
+        android:text="Log in" />
+
+
+    <TextView
+        android:id="@+id/noaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="850dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="380dp"
+        android:text="Don’t have any account yet?"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/noaccount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="255dp"
+        android:layout_marginTop="850dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="380dp"
+        android:text="Sign Up"
+        android:textColor="#884D57"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

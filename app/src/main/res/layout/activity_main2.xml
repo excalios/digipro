@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="#FCF6F7">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="185dp"
+        android:layout_height="41dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/logo"
+        android:text="Log in" />
+
+    <EditText
+        android:id="@+id/sign_username"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="479dp"
+        android:background="@drawable/kotak"
+        android:hint="Username"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/sign_email"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="479dp"
+        android:background="@drawable/kotak"
+        android:hint="Email"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/Phone_number"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="479dp"
+        android:background="@drawable/kotak"
+        android:hint="Phone Number"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="443dp"
+        android:background="@drawable/kotak"
+        android:hint="Password"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/confirmpass"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="518dp"
+        android:background="@drawable/kotak"
+        android:hint="Confirm Password"
+        android:paddingLeft="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="12dp" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="593dp"
+        android:background="@drawable/sign"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="658dp"
+        android:text="By signing up I agree to the"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="677dp"
+        android:text="Terms & Condition"
+        android:textColor="#884D57"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="677dp"
+        android:text="Privacy Police"
+        android:textColor="#884D57"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="677dp"
+        android:text="and"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="850dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="380dp"
+        android:text="Already have an account?"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/noaccount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="258dp"
+        android:layout_marginTop="850dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="380dp"
+        android:text="Log In"
+        android:textColor="#884D57"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
