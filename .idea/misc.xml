@@ -3,13 +3,46 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/alert.xml" value="0.147" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/arrowback.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/audio.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/avatar.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/call.xml" value="0.163" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/danger.xml" value="0.147" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/heart_rate.xml" value="0.141" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/history.xml" value="0.122" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/home.xml" value="0.122" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1835" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/ic_group_450.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/ic_group_456.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/ic_text.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/kotak1.xml" value="0.1195" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/kotak2.xml" value="0.1495" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/kotak3.xml" value="0.147" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/line.xml" value="0.1495" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/location.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/out.xml" value="0.163" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/privacy.xml" value="0.163" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/profile.xml" value="0.163" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/profile2.xml" value="0.163" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/record.xml" value="0.141" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/drawable/setting.xml" value="0.163" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/acitivity_history2.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_acitivity_history2.xml" value="0.12375339981867634" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_buttom_navigation.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_editprofile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_emergency_call.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_history1.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_history2.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_history3.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_history4.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_main2.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_privacypolice.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/activity_terms_cond.xml" value="0.15091919623770841" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/fragment_history.xml" value="0.13809320222317228" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/fragment_home.xml" value="0.13809320222317228" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/fragment_profile.xml" value="0.13809320222317228" />

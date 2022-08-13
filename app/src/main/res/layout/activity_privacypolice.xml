@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FCF6F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/kotak4" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/brown"
+                    android:src="@drawable/arrowback" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="Privacy Police"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FCF6F7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="20dp"
+                    android:textColor="#474C52"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor consequat id porta nibh venenatis. Feugiat in ante metus dictum. Ultricies leo integer malesuada nunc vel risus. Aliquam purus sit amet luctus venenatis lectus magna. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Nunc mi ipsum faucibus vitae. Netus et malesuada fames ac turpis egestas integer eget aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sodales ut eu sem integer. Fusce ut placerat orci nulla pellentesque dignissim enim sit. Nullam vehicula ipsum a arcu cursus vitae. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Neque ornare aenean euismod elementum nisi quis eleifend quam. Ultrices dui sapien eget mi proin sed libero enim. Eros in cursus turpis massa tincidunt dui ut. Tempor orci eu lobortis elementum nibh. Sed sed risus pretium quam vulputate dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor consequat id porta nibh venenatis. Feugiat in ante metus dictum. Ultricies leo integer malesuada nunc vel risus. Aliquam purus sit amet luctus venenatis lectus magna. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Nunc mi ipsum faucibus vitae. Netus et malesuada fames ac turpis egestas integer eget aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sodales ut eu sem integer. Fusce ut placerat orci nulla pellentesque dignissim enim sit. Nullam vehicula ipsum a arcu cursus vitae. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Neque ornare aenean euismod elementum nisi quis eleifend quam. Ultrices dui sapien eget mi proin sed libero enim. Eros in cursus turpis massa tincidunt dui ut. Tempor orci eu lobortis elementum nibh. Sed sed risus pretium quam vulputate dignissim."
+                    android:textSize="12dp" />
+
+
+
+                <Button
+
+                    android:id="@+id/btn_login"
+                    android:layout_width="328dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/NextButton"
+                    android:gravity="center"
+                    android:text="I ACCEPT"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>
