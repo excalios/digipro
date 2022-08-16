@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_hom_nav"
+    app:startDestination="@id/activityHome">
+
+    <activity
+        android:id="@+id/activityHome"
+        android:name="com.example.digipro.ActivityHome"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/activity_history4"
+        android:name="com.example.digipro.activity_history4"
+        android:label="activity_history4"
+        tools:layout="@layout/activity_history4" />
+    <activity
+        android:id="@+id/profile2"
+        android:name="com.example.digipro.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+</navigation>

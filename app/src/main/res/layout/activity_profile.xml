@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile"
+    tools:context=".ProfileActivity"
     android:background="#FCF6F7">
 
     <RelativeLayout
@@ -20,7 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -29,49 +30,49 @@
                 android:src="@drawable/avatar" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical"
-                android:paddingTop="15dp">
+                android:textAlignment="center">
 
                 <TextView
                     android:id="@id/username"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:text="Tasya Delarosa"
                     android:textColor="@color/brown"
                     android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="24dp"
+                    tools:layout_conversion_absoluteWidth="255dp"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="170dp" />
 
                 <TextView
                     android:id="@id/Phone_number"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="085123456789"
                     android:textColor="@color/brown"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="255dp"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="194dp" />
 
                 <TextView
                     android:id="@+id/profile_email"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="tasyadelarosa@gmail.com"
                     android:textColor="@color/brown"
-                    android:textSize="14dp" />
-
-                <Button
-                    android:id="@+id/edit_profil"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="15dp"
-                    android:backgroundTint="@color/brown"
-                    android:text="Edit Profile"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-                "
-                />
+                    android:textSize="14dp"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="255dp"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="213dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -177,6 +178,7 @@
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentBottom="true"
