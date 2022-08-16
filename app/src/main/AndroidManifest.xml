@@ -16,9 +16,6 @@
         android:theme="@style/Theme.DigitalProtect"
         tools:targetApi="31">
         <activity
-            android:name=".editprofile"
-            android:exported="false" />
-        <activity
             android:name=".terms_cond"
             android:exported="false" />
         <activity
