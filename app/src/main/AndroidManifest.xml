@@ -28,7 +28,7 @@
             android:name=".emergency_call"
             android:exported="false" />
         <activity
-            android:name=".profile"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".activity_history4"

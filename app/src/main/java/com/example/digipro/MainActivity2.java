@@ -59,6 +59,7 @@ public class MainActivity2 extends AppCompatActivity {
                                 // Display the first 500 characters of the response string.
                                 try {
                                     String saveToken=response.getString("token");
+                                    displayMessage(response.getJSONObject("payload").getString("email"));
                                     edit.putString("token",saveToken);
                                     Log.i("Login",saveToken);
                                     edit.commit();
