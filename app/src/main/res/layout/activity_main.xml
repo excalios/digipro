@@ -42,88 +42,98 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="50dp"
                     android:background="@drawable/kotak"
+                    android:hint="Username"
+                    android:textColorHint="@color/grey"
                     android:paddingStart="20dp"
-                    android:text="Username"
                     android:textColor="#474C52"
                     android:textSize="12dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/sign_email"
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:hint="Email"
+                    android:textColorHint="@color/grey"
                     app:boxBackgroundMode="none">
 
                     <EditText
+                        android:id="@+id/sign_email"
                         android:layout_width="328dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center"
                         android:background="@drawable/kotak"
                         android:padding="10dp"
-                        android:text="Email"
                         android:textColor="#474C52"
                         android:textSize="12dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Phone_number"
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:hint="Phone Number"
+                    android:textColorHint="@color/grey"
                     app:boxBackgroundMode="none">
 
                     <EditText
-                        android:id="@id/Phone_number"
+                        android:id="@+id/Phone_number"
                         android:layout_width="328dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center"
                         android:background="@drawable/kotak"
                         android:padding="10dp"
-                        android:text="Phone Number"
                         android:textColor="#474C52"
                         android:textSize="12dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Pass"
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    android:textColorHint="@color/grey"
                     app:boxBackgroundMode="none"
-                    app:passwordToggleEnabled="true">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/brown"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/brown">
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Pass"
                         android:layout_width="328dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center"
                         android:background="@drawable/kotak"
+                        android:inputType="textPassword"
                         android:padding="10dp"
-                        android:text="Password"
                         android:textColor="#474C52"
                         android:textSize="12dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ConfPass"
                     android:layout_width="328dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    app:boxBackgroundMode="none">
+                    android:hint="Confirm Password"
+                    android:textColorHint="@color/grey"
+                    app:boxBackgroundMode="none"
+                    app:passwordToggleEnabled="false">
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ConfPass"
                         android:layout_width="328dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center"
                         android:background="@drawable/kotak"
+                        android:inputType="textPassword"
                         android:padding="10dp"
-                        android:text="Confirm Password"
                         android:textColor="#474C52"
                         android:textSize="12dp" />
 
@@ -131,17 +141,17 @@
 
 
                 <Button
-
                     android:id="@+id/btn_login"
                     android:layout_width="328dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="30dp"
-                    android:background="@drawable/NextButton"
+                    android:autoText="false"
+                    android:background="@color/brown"
                     android:gravity="center"
                     android:text="Sign Up"
-                    android:textAllCaps="false" />
-
+                    android:textAllCaps="false"
+                    tools:text="Sign Up" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -224,11 +234,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
+                            android:linksClickable="true"
+                            android:onClick="goToLoginPage"
                             android:text="Login"
-                            android:textColor="@color/brown"
-                            android:textStyle="bold"
 
-                            />
+                            android:textColor="@color/brown"
+                            android:textStyle="bold" />
 
 
                     </LinearLayout>
