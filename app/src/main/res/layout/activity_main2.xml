@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
-    android:background="#FCF6F7">
+    android:background="#FCF6F7"
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,10 +43,10 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="28dp"
                     android:background="@drawable/kotak"
-                    android:paddingStart="20dp"
                     android:hint="email"
-                    android:textColorHint="@color/grey"
+                    android:paddingStart="20dp"
                     android:textColor="#474C52"
+                    android:textColorHint="@color/grey"
                     android:textSize="12dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -101,13 +101,6 @@
                     android:text="Log in"
                     android:textAllCaps="false" />
 
-                <ImageButton
-                    android:layout_width="328dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/google_login" />
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -150,4 +143,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>
