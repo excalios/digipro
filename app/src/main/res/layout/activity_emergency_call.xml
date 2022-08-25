@@ -26,6 +26,7 @@
                 android:padding="22dp">
 
                 <ImageButton
+                    android:id="@+id/back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -38,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center_horizontal"
-                android:text="Emergency Call"
+                android:text="Emergency Contact"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -51,73 +52,141 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:orientation="vertical"
-                android:padding="10dp">
+                >
 
-                <EditText
-                    android:id="@+id/no1"
-                    android:layout_width="328dp"
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="1"
+                    android:columnCount="1"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false"
+                    android:padding="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        app:cardCornerRadius="13dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="15dp"
+                                        android:src="@drawable/profile4" />
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+                                        <ImageButton
+                                            android:id="@+id/delete"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/delete"
+                                            android:layout_marginTop="13dp"
+                                            android:layout_marginLeft="285dp"
+                                            />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/namakontak"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:text="Nama"
+                                                android:textColor="@color/black"
+                                                android:textSize="12dp" />
+
+                                            <TextView
+                                                android:id="@+id/emergency_name"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Iftikhar Jihan Naurah"
+                                                android:textColor="@color/black"
+                                                android:textSize="15dp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/line2"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="15dp"
+                                        android:src="@drawable/call2" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/nomortelepon"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Nomor Telepon"
+                                            android:textColor="@color/black"
+                                            android:textSize="12dp" />
+                                        <TextView
+                                            android:id="@+id/emergency_phone"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="085247917359"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </GridLayout>
+
+                <ImageButton
+
+                    android:id="@+id/add_more"
+                    android:layout_width="341dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:background="@drawable/kotak"
-                    android:paddingStart="20dp"
-                    android:text="Phone number"
-                    android:textColor="#474C52"
-                    android:textSize="12dp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/no2"
-                    android:layout_width="328dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    app:boxBackgroundMode="none">
-
-                    <EditText
-                        android:layout_width="328dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/kotak"
-                        android:padding="10dp"
-                        android:text="Phone Number"
-                        android:textColor="#474C52"
-                        android:textSize="12dp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Phone_number"
-                    android:layout_width="328dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    app:boxBackgroundMode="none">
-
-                    <EditText
-                        android:layout_width="328dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/kotak"
-                        android:padding="10dp"
-                        android:text="Phone Number"
-                        android:textColor="#474C52"
-                        android:textSize="12dp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-                <Button
-
-                    android:id="@+id/btn_login"
-                    android:layout_width="328dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/next_button"
-                    android:gravity="center"
-                    android:text="Save"
-                    android:textAllCaps="false" />
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/tambah_kontak"
+                    android:gravity="center" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

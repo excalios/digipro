@@ -43,15 +43,16 @@
                 android:text="ID History"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/history_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
                 android:text="H-170722001"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </RelativeLayout>
 
 
