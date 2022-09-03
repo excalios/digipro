@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -49,6 +50,16 @@ public class ProfileActivity extends AppCompatActivity {
                 }
 
                 return false;
+            }
+        });
+
+        LinearLayout emergencyCallBtn = findViewById(R.id.prfEmergencyCall);
+
+        emergencyCallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ProfileActivity.this, emergency_call.class);
+                startActivity(i);
             }
         });
     }

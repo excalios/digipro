@@ -58,6 +58,7 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/fragment_home.xml" value="0.13809320222317228" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/layout/fragment_profile.xml" value="0.13809320222317228" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/digipro/app/src/main/res/menu/bottom_menu.xml" value="0.15091919623770841" />
+        <entry key="app/src/main/res/layout/activity_add_contact.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_editprofile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_emergency_call.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_history2.xml" value="0.1" />
@@ -69,6 +70,7 @@
         <entry key="app/src/main/res/layout/activity_privacypolice.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_terms_cond.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/contact_card_layout.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.1984375" />
       </map>
     </option>

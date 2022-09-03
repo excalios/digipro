@@ -32,7 +32,13 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs;
         SharedPreferences.Editor edit;
         prefs = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+        String token = prefs.getString("token", "");
         edit = prefs.edit();
+
+        if(!token.isEmpty()){
+            Intent i = new Intent(this, ActivityHome.class);
+            startActivity(i);
+        }
 
         RequestQueue queue = VolleySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
 
