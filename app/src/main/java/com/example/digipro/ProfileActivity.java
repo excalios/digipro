@@ -62,5 +62,22 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        LinearLayout logOutBtn = findViewById(R.id.prfLogOut);
+
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences prefs;
+                SharedPreferences.Editor edit;
+                prefs = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+                edit = prefs.edit();
+                edit.clear();
+                edit.commit();
+
+                Intent i = new Intent(ProfileActivity.this, MainActivity2.class);
+                startActivity(i);
+            }
+        });
     }
 }

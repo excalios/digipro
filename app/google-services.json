@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "675622079272",
+    "project_id": "digipro-357707",
+    "storage_bucket": "digipro-357707.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675622079272:android:f301b693684ef86b51de1d",
+        "android_client_info": {
+          "package_name": "com.example.digipro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675622079272-jnc3489p643dsiaaduprp8dahkp1sc2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4gRnNxJ1qm6mKvSIbcmVnfMp63L0O8o4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675622079272-jnc3489p643dsiaaduprp8dahkp1sc2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

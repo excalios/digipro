@@ -1,10 +1,13 @@
 package com.example.digipro;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,12 +25,25 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Collection;
+import java.util.List;
+
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.Intrinsics;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String[] REQUIRED_PERMISSIONS;
+    private static final int REQUEST_CODE_PERMISSIONS = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (!allPermissionsGranted()) {
+            ActivityCompat.requestPermissions(
+                    this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS);
+        }
 
         SharedPreferences prefs;
         SharedPreferences.Editor edit;
@@ -125,6 +141,46 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private final boolean allPermissionsGranted() {
+        Object[] $this$all$iv = REQUIRED_PERMISSIONS;
+        boolean $i$f$all = false;
+        int var3 = 0;
+        int var4 = $this$all$iv.length;
+
+        boolean var10000;
+        while(true) {
+            if (var3 >= var4) {
+                var10000 = true;
+                break;
+            }
+
+            Object element$iv = $this$all$iv[var3];
+            boolean var7 = false;
+            if (ContextCompat.checkSelfPermission(this.getBaseContext(), (String) element$iv) != 0) {
+                var10000 = false;
+                break;
+            }
+
+            ++var3;
+        }
+
+        return var10000;
+    }
+
+    static {
+        List var0 = CollectionsKt.mutableListOf(new String[]{"android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.ACCESS_FINE_LOCATION"});
+        boolean var2 = false;
+        if (Build.VERSION.SDK_INT <= 28) {
+            var0.add("android.permission.WRITE_EXTERNAL_STORAGE");
+        }
+
+        Collection $this$toTypedArray$iv = (Collection)var0;
+        boolean $i$f$toTypedArray = false;
+        Object[] var10000 = $this$toTypedArray$iv.toArray(new String[0]);
+        Intrinsics.checkNotNull(var10000, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>");
+        REQUIRED_PERMISSIONS = (String[])var10000;
     }
 
     public String trimMessage(String json, String key){

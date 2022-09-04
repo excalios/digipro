@@ -2,6 +2,7 @@ package com.example.digipro;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
@@ -18,11 +19,17 @@ import android.hardware.SensorManager;
 import android.location.GpsStatus;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -39,6 +46,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ActivityHome extends AppCompatActivity implements SensorEventListener {
@@ -51,20 +59,24 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
     SensorEventListener sensorEventListener;
     LocationManager locationManager;
     String longitude, latitude;
+    int maxCount = 0;
+    ConstraintLayout emergencyButtonLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         ActivityCompat.requestPermissions(this,
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
 
         mSensorManager = ((SensorManager) getSystemService(SENSOR_SERVICE));
-        mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
         mHeartBeatSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_BEAT);
         Log.i(TAG, "LISTENER REGISTERED.");
-        Toast.makeText(ActivityHome.this, "Something Here", Toast.LENGTH_SHORT).show();
+
+//        Intent heartBeatIntent = new Intent(this, HeartBeatService.class);
+//        startService(heartBeatIntent);
 
         BottomNavigationView btm = findViewById(R.id.bottomNavigation);
         btm.setSelectedItemId(R.id.activityHome);
@@ -91,6 +103,9 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
         String token = prefs.getString("token", "");
 
         ImageButton emergencyBtn = findViewById(R.id.dangerbutton);
+        emergencyButtonLayout = findViewById(R.id.linearLayout2);
+
+        emergencyButtonLayout.setVisibility(View.INVISIBLE);
 
         emergencyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +115,7 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
                     OnGPS();
                 } else {
                     getLocation();
+                    startActivity(new Intent(getApplicationContext(), RecordActivity.class));
                 }
             }
         });
@@ -109,7 +125,6 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
     protected void onResume() {
         super.onResume();
         mSensorManager.registerListener(this, mHeartBeatSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -124,8 +139,6 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-//        Toast.makeText(ActivityHome.this, event.sensor.getType(), Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "onSensorChanged: Sensor");
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
             Toast.makeText(ActivityHome.this, "Heart Rate Detected", Toast.LENGTH_SHORT).show();
             String msg = "Heart Rate: " + (int) event.values[0];
@@ -133,7 +146,25 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
             Log.d(TAG, msg);
         } else if (event.sensor.getType() == Sensor.TYPE_HEART_BEAT) {
             String msg = "Heart Beat: " + (int) event.values[0];
-            Toast.makeText(ActivityHome.this, msg, Toast.LENGTH_SHORT).show();
+            displayMessage(msg + maxCount);
+            if(event.values[0] >= 100){
+                maxCount++;
+                if(maxCount >= 3){
+                    Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                    Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+                    r.play();
+                    emergencyButtonLayout.setVisibility(View.VISIBLE);
+                    Handler handler = new Handler(Looper.getMainLooper());
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            emergencyButtonLayout.setVisibility(View.INVISIBLE);
+                        }
+                    }, 10000);
+                }
+            } else {
+                maxCount = 0;
+            }
             Log.d(TAG, msg);
         } else
             Log.d(TAG, "Unknown sensor type");
@@ -162,7 +193,7 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
                 ActivityHome.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
         } else {
-            Location locationGPS = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location locationGPS = getLastKnownLocation();
             if (locationGPS != null) {
                 double lat = locationGPS.getLatitude();
                 double longi = locationGPS.getLongitude();
@@ -173,6 +204,26 @@ public class ActivityHome extends AppCompatActivity implements SensorEventListen
                 Toast.makeText(this, "Unable to find location.", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    private Location getLastKnownLocation() {
+        locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+        List<String> providers = locationManager.getProviders(true);
+        Location bestLocation = null;
+        for (String provider : providers) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+            }
+            Location l = locationManager.getLastKnownLocation(provider);
+            if (l == null) {
+                continue;
+            }
+            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
+                // Found best last known location: %s", l);
+                bestLocation = l;
+            }
+        }
+        return bestLocation;
     }
 
     public String trimMessage(String json, String key) {
